@@ -12,5 +12,6 @@ void main() {
   // TODO: Initialize Authentication
 
   runApp(const App());
+
 }
 
