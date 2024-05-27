@@ -1,44 +1,43 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:tamago_store/common/styles/spacing_style.dart';
-import 'package:tamago_store/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:tamago_store/common/widgets/login_signup/form_divider.dart';
-import 'package:tamago_store/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:tamago_store/common/widgets/login_signup/social_button.dart';
+import 'package:tamago_store/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
-import 'package:tamago_store/utils/constants/image_strings.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/constants/text_string.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class SignupScreen extends StatelessWidget {
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = MyHelperFunctions.isDarkMode(context);
-
     return Scaffold(
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-            padding: MySpacingStyle.paddingWithAppBarHeight,
+          padding: const EdgeInsets.all(MySizes.defaultSpace),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //Logo
-              LoginHeader(dark: dark),
 
-              // Form
-              const LoginForm(),
+              /// Title
+              Text(MyText.signupTitle,
+              style: Theme.of(context).textTheme.headlineMedium,),
+              const SizedBox(height: MySizes.spaceBtwSections,),
+
+              /// Form
+              const MySignupForm(),
+              const SizedBox(height: MySizes.spaceBtwSections,),
 
               /// Divider
-              MyFormDivider(dividerText: MyText.orSignInWith.capitalize!,),
+              MyFormDivider(dividerText: MyText.orSignUpWith.capitalize!),
               const SizedBox(height: MySizes.spaceBtwItems,),
-              /// Footer
+              // Social button
               const SocialButton(),
-
             ],
           ),
         ),
@@ -46,11 +45,5 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
-
-
-
-
-
 
 

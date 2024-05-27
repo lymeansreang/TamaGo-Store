@@ -4,8 +4,8 @@ import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/text_string.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';
 
-class LoginFormDivider extends StatelessWidget {
-  const LoginFormDivider({
+class MyFormDivider extends StatelessWidget {
+  const MyFormDivider({
     super.key,
     required this.dividerText,
   });

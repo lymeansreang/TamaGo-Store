@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tamago_store/utils/constants/colors.dart';
 
 class MyOutlineButtonTheme {
   MyOutlineButtonTheme._();
@@ -6,13 +7,13 @@ class MyOutlineButtonTheme {
   static final lightOutlineButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       elevation: 0,
-      foregroundColor: Colors.black,
+      foregroundColor: MyColors.dark,
       side: const BorderSide(
         color: Colors.blue
       ),
       textStyle: const TextStyle(
           fontSize: 16,
-          color: Colors.black,
+          color: MyColors.dark,
           fontWeight: FontWeight.w600,
       ),
       padding: const EdgeInsets.symmetric(
