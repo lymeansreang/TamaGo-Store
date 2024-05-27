@@ -19,13 +19,13 @@ class MyText{
   // -- Authentication Form Text
   static const String firstname = "First Name";
   static const String lastName = "Last Name";
-  static const String email = "Email";
+  static const String email = "E-mail";
   static const String password = "Password";
   static const String newPassword = "New Password";
   static const String username = "Username";
   static const String phoneNo = "Phone Number";
   static const String rememberMe = "Remember Me";
-  static const String forgetPassword = "Forget Password";
+  static const String forgetPassword = "Forget Password?";
   static const String signIn = "Sign In";
   static const String createAccount = "Create Account";
   static const String orSignInWith = "or Sign in with";

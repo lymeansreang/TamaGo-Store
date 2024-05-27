@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class MyImages {
 
   //App Logos
-  static const String darkAppLogo = "assets/logos/dark-logo.png";
-  static const String lightAppLogo = "assets/logos/light-logo.png";
+  static const String darkAppLogo = "assets/logos/light-logo.png";
+  static const String lightAppLogo = "assets/logos/dark-logo.png";
 
   //Social Logos
   static const String google = "assets/logos/google.png";
