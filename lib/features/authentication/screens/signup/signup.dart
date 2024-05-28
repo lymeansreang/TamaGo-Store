@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/common/widgets/login_signup/form_divider.dart';
 import 'package:tamago_store/common/widgets/login_signup/social_button.dart';
+import 'package:tamago_store/features/authentication/screens/login/login.dart';
 import 'package:tamago_store/features/authentication/screens/signup/widgets/signup_form.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
@@ -16,7 +17,12 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        automaticallyImplyLeading: false,
+        actions: [
+          IconButton(onPressed: () => Get.offAll(() => const LoginScreen()), icon: const Icon(CupertinoIcons.clear)),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(MySizes.defaultSpace),
