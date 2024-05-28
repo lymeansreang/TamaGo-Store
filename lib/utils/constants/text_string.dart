@@ -47,7 +47,7 @@ class MyText{
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
   static const String changeYourPasswordSubTitle = "Your account security is our priority! We've sent you a secure link to safely change your password and keep your account protected";
   static const String confirmEmail = "Verify your email address";
-  static const String confirmEmailSubTitle = "Congratulations! Your account awaits: Verify your email ti start shopping and experience a world of Unrivaled Deals and Personalized offers.";
+  static const String confirmEmailSubTitle = "Congratulations! Your account awaits: Verify your email to start shopping and experience a world of Unrivaled Deals and Personalized offers.";
   static const String emailNotReceivedMessage = "Didn't get the email? Check your junk/spam or resend it.";
   static const String yourAccountCreatedTitle = "Your account successfully created!";
   static const String yourAccountCreatedSubTitle = "Welcome to your Ultimate Shopping Destination: Your account is created, Unleash the Joy of Seamless Online Shopping";
