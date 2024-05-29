@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tamago_store/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:tamago_store/features/authentication/screens/signup/signup.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/constants/text_string.dart';
@@ -52,7 +53,7 @@ class LoginForm extends StatelessWidget {
 
                 /// Forget Password
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const ForgetPassword()),
                   child:const Text(MyText.forgetPassword),),
               ],
             ),

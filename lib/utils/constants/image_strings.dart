@@ -18,5 +18,6 @@ class MyImages {
   //Success image
   static const String successImage1 = "assets/images/success/verifying.gif";
   static const String successImage2 = "assets/images/success/success.gif";
+  static const String resetPasswordSent = "assets/images/success/Sending Mail.gif";
 
 }
