@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tamago_store/utils/constants/colors.dart';
+import 'package:tamago_store/utils/constants/sizes.dart';
 
 class MyAppBarTheme{
   MyAppBarTheme._();
@@ -10,15 +12,15 @@ class MyAppBarTheme{
     backgroundColor: Colors.transparent,
     surfaceTintColor: Colors.transparent,
     iconTheme: IconThemeData(
-        color: Colors.black,
-        size: 24),
+        color: MyColors.black,
+        size: MySizes.iconMd),
     actionsIconTheme: IconThemeData(
-        color: Colors.black,
-        size: 24),
+        color: MyColors.black,
+        size: MySizes.iconMd),
     titleTextStyle: TextStyle(
         fontSize: 18.0,
         fontWeight: FontWeight.w600,
-        color: Colors.black),
+        color: MyColors.black),
   );
   static const darkAppBarTheme = AppBarTheme(
     elevation: 0,
@@ -27,14 +29,14 @@ class MyAppBarTheme{
     backgroundColor: Colors.transparent,
     surfaceTintColor: Colors.transparent,
     iconTheme: IconThemeData(
-        color: Colors.black,
-        size: 24),
+        color: MyColors.white,
+        size: MySizes.iconMd),
     actionsIconTheme: IconThemeData(
-        color: Colors.white,
-        size: 24),
+        color: MyColors.white,
+        size: MySizes.iconMd),
     titleTextStyle: TextStyle(
         fontSize: 18.0,
         fontWeight: FontWeight.w600,
-        color: Colors.white),
+        color: MyColors.white),
   );
 }
