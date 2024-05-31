@@ -8,7 +8,7 @@ class MyPrimaryHeaderContainer extends StatelessWidget {
     super.key,required this.child
   });
 
-  final Widget? child;
+  final Widget child;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +30,7 @@ class MyPrimaryHeaderContainer extends StatelessWidget {
                   top: 100,
                   right: -300,
                   child: MyCircularContainer(backgroundColor: MyColors.white.withOpacity(0.1),)),
+              child,
             ],
           ),
         ),
