@@ -20,4 +20,7 @@ class MyImages {
   static const String successImage2 = "assets/images/success/success.gif";
   static const String resetPasswordSent = "assets/images/success/Sending Mail.gif";
 
+  //Categories
+
+
 }

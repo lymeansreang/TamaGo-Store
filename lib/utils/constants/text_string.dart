@@ -14,7 +14,7 @@ class MyText{
   static const String onBoardingSubTitle3 = "From our door step to yours - Swift, Secure and contactless delivery!";
 
   static const String homeAppBarTitle = "Good day for Shopping";
-  static const String homeAppBarSubTitle = "TamaGo Store";
+  static const String homeAppBarSubTitle = "Ly Meansreang";
 
   // -- Authentication Form Text
   static const String firstname = "First Name";
