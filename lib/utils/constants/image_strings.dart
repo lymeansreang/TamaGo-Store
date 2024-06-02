@@ -32,4 +32,8 @@ class MyImages {
   static const String jewelery = "assets/images/categories/icons8-sparkling-diamond-50.png";
   static const String toy = "assets/images/categories/icons8-toy-50.png";
 
+  //Banners
+  static const String promoBanner1 = "assets/images/banners/banner1.jpg";
+  static const String promoBanner2 = "assets/images/banners/banner2.jpg";
+  static const String promoBanner3 = "assets/images/banners/banner3.jpg";
 }

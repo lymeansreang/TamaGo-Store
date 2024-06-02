@@ -1,12 +1,18 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:tamago_store/common/widgets/custom_shape/container/circular_container.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/primary_header_container.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/search_contaioner.dart';
 import 'package:tamago_store/common/widgets/image_text_widget/vertical_image_text.dart';
+import 'package:tamago_store/common/widgets/images/my_rounded_image.dart';
 import 'package:tamago_store/common/widgets/texts/section_heading.dart';
 import 'package:tamago_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:tamago_store/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:tamago_store/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/image_strings.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 
@@ -49,12 +55,22 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+
+            /// -- Body
+            Padding(
+              padding: EdgeInsets.all(MySizes.defaultSpace),
+              child: MyProSlider(banners: [MyImages.promoBanner1,MyImages.promoBanner2,MyImages.promoBanner3],)
+            ),
           ],
         ),
       ),
     );
   }
 }
+
+
+
+
 
 
 
