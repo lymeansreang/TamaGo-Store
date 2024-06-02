@@ -57,6 +57,7 @@ flutter:
     - assets/images/success/
     - assets/images/categories/
     - assets/images/banners/
+    - assets/images/products/
 
 
   #----------------- LOCAL FONTS --------------------#

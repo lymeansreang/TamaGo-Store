@@ -5,13 +5,18 @@ class MyColors{
 
   //Default color
   static const Color primaryColor = Color(0xFF3a86ff);
-  static const Color secondaryColor = Color(0xFFEC7247);
-  static const Color accentColor = Color(0xFFF5F5F5);
+  static const Color secondaryColor = Color(0xFFFFE248);
+  static const Color accentColor = Color(0xFFB0C7FF);
 
   //Text color
   static const Color textPrimary = Color(0xFF333333);
-  static const Color textSecondary = Color(0xFFEC7247);
-  static const Color textAccent = Color(0xFF797979);
+  static const Color textSecondary = Color(0xFF6C7570);
+  static const Color textAccent = Color(0xFFF3F5FF);
+
+  //Button color
+  static const Color buttonPrimary = Color(0xFF3a86ff);
+  static const Color buttonSecondary = Color(0xFF6C7570);
+  static const Color buttonDisable = Color(0xFFF3F5FF);
 
   //Background color
   static const Color light = Color(0xFFF5F5F5);

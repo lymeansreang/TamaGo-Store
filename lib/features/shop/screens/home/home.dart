@@ -8,6 +8,8 @@ import 'package:tamago_store/common/widgets/custom_shape/container/primary_heade
 import 'package:tamago_store/common/widgets/custom_shape/container/search_contaioner.dart';
 import 'package:tamago_store/common/widgets/image_text_widget/vertical_image_text.dart';
 import 'package:tamago_store/common/widgets/images/my_rounded_image.dart';
+import 'package:tamago_store/common/widgets/layouts/grid_layout.dart';
+import 'package:tamago_store/common/widgets/product/product_cards/product_card_vertical.dart';
 import 'package:tamago_store/common/widgets/texts/section_heading.dart';
 import 'package:tamago_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:tamago_store/features/shop/screens/home/widgets/home_categories.dart';
@@ -21,12 +23,12 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// Header
-            MyPrimaryHeaderContainer(
+            const MyPrimaryHeaderContainer(
               child:  Column(
                 children: [
                   /// -- AppBar
@@ -58,8 +60,19 @@ class HomeScreen extends StatelessWidget {
 
             /// -- Body
             Padding(
-              padding: EdgeInsets.all(MySizes.defaultSpace),
-              child: MyProSlider(banners: [MyImages.promoBanner1,MyImages.promoBanner2,MyImages.promoBanner3],)
+              padding: const EdgeInsets.all(MySizes.defaultSpace),
+              child: Column(
+                children: [
+
+                  /// -- Promo Slider
+                  const MyProSlider(banners: [MyImages.promoBanner1,MyImages.promoBanner2,MyImages.promoBanner3],),
+                  const SizedBox(height: MySizes.spaceBtwSections,),
+
+                  /// -- Popular Product
+                  MyGridLayout(itemCount: 2,itemBuilder: (_, index) => const MyProductVertical(),),
+
+                ],
+              )
             ),
           ],
         ),
@@ -67,6 +80,8 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
