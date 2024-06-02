@@ -58,7 +58,7 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
 
-            /// -- Body
+            /// -- Body [Section #3]
             Padding(
               padding: const EdgeInsets.all(MySizes.defaultSpace),
               child: Column(
@@ -67,6 +67,10 @@ class HomeScreen extends StatelessWidget {
                   /// -- Promo Slider
                   const MyProSlider(banners: [MyImages.promoBanner1,MyImages.promoBanner2,MyImages.promoBanner3],),
                   const SizedBox(height: MySizes.spaceBtwSections,),
+
+                  /// --Heading
+                  MySectionHeading(title: 'Popular Categories',onPressed: (){},),
+                  const SizedBox(height: MySizes.spaceBtwItems,),
 
                   /// -- Popular Product
                   MyGridLayout(itemCount: 2,itemBuilder: (_, index) => const MyProductVertical(),),

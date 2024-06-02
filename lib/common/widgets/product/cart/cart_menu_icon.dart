@@ -6,10 +6,10 @@ class MyCartCounterIcon extends StatelessWidget {
   const MyCartCounterIcon({
     super.key,
     required this.onPressed,
-    required this.iconColor,
+    this.iconColor,
   });
 
-  final Color iconColor;
+  final Color? iconColor;
   final VoidCallback onPressed;
 
 

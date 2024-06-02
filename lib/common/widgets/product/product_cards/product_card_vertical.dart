@@ -6,6 +6,7 @@ import 'package:tamago_store/common/styles/shadow_style.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/rounded_container.dart';
 import 'package:tamago_store/common/widgets/icons/my_circular_icon.dart';
 import 'package:tamago_store/common/widgets/images/my_rounded_image.dart';
+import 'package:tamago_store/common/widgets/texts/my_brand_title_text_with_verified_icon.dart';
 import 'package:tamago_store/common/widgets/texts/product_price_text.dart';
 import 'package:tamago_store/common/widgets/texts/product_title_text.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
@@ -39,6 +40,7 @@ class MyProductVertical extends StatelessWidget {
               backgroundColor: dark ? MyColors.dark : MyColors.light,
               child: Stack(
                 children: [
+
                   /// -- Thumbnail Image
                   const MyRoundedImage(
                     imageUrl: MyImages.productImg1,
@@ -78,50 +80,44 @@ class MyProductVertical extends StatelessWidget {
                   children: [
                     const MyProductTitleText(title: 'Green Nike Air Shoes',smallSize: true,),
                     const SizedBox(height: MySizes.spaceBtwItems / 2,),
-                    Row(
-                      children: [
-                        Text('Nike',
-                        overflow: TextOverflow.ellipsis,
-                          maxLines: 1,
-                          style: Theme.of(context).textTheme.labelMedium,
-                        ),
-                        const SizedBox(width: MySizes.xs,),
-                        const Icon(Iconsax.verify5,
-                          color: MyColors.primaryColor,
-                          size: MySizes.iconXs,
-                        ),
-                      ],
-                    ),
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        /// -- Price
-                        const MyProductPriceText(price: '35.99',),
-
-                        Container(
-                          decoration: const BoxDecoration(
-                            color: MyColors.dark,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(MySizes.cardRadiusMd),
-                              bottomRight: Radius.circular(MySizes.productImageRadius),
-                            )
-                          ),
-                          child: const SizedBox(
-                            width: MySizes.iconLg *1.2,
-                            height: MySizes.iconLg *1.2,
-                            child: Center(
-                              child: Icon(
-                                Iconsax.add,
-                                color: MyColors.white,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    )
+                    MyBrandTitleWithVerifiedIcon(title: 'Nike'),
                   ],
                 ),
+            ),
+
+            // Todo: Add Spacer() here to keep the height of each Box same in case 1 or 2 lines of headings
+            const Spacer(),
+
+            /// -- Price Row
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                /// -- Price
+                const Padding(
+                  padding: EdgeInsets.only(left: MySizes.sm),
+                  child: MyProductPriceText(price: '35.99',),
+                ),
+
+                Container(
+                  decoration: const BoxDecoration(
+                      color: MyColors.dark,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(MySizes.cardRadiusMd),
+                        bottomRight: Radius.circular(MySizes.productImageRadius),
+                      )
+                  ),
+                  child: const SizedBox(
+                    width: MySizes.iconLg *1.2,
+                    height: MySizes.iconLg *1.2,
+                    child: Center(
+                      child: Icon(
+                        Iconsax.add,
+                        color: MyColors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
@@ -129,6 +125,8 @@ class MyProductVertical extends StatelessWidget {
     );
   }
 }
+
+
 
 
 

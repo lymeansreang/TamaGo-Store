@@ -10,7 +10,7 @@ class MyRoundedContainer extends StatelessWidget {
     this.radius = MySizes.cardRadiusLg,
     this.child,
     this.showBorder = false,
-    this.borderColor = MyColors.white,
+    this.borderColor = MyColors.grey,
     this.backgroundColor = MyColors.borderPrimary,
     this.padding,
     this.margin,

@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/features/shop/screens/home/home.dart';
+import 'package:tamago_store/features/shop/screens/store/store.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';
 
@@ -43,7 +44,7 @@ class NavigationController extends GetxController{
 
   final screens = [
     const HomeScreen(),
-    Container(color: Colors.green,),
+    const StoreScreen(),
     Container(color: Colors.purple,),
     Container(color: Colors.orange,),
   ];

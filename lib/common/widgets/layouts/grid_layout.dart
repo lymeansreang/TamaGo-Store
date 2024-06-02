@@ -27,6 +27,7 @@ class MyGridLayout extends StatelessWidget {
           crossAxisSpacing: MySizes.gridViewSpacing,
           mainAxisExtent: mainAxisExtent,
         ),
-        itemBuilder: (_, index) =>  const MyProductVertical());
+        itemBuilder: itemBuilder,
+    );
   }
 }
