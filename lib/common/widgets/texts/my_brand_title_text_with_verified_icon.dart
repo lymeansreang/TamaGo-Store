@@ -36,11 +36,11 @@ class MyBrandTitleWithVerifiedIcon extends StatelessWidget {
             brandTextSize: brandTextSize,
           ),
         ),
-        const SizedBox(width: MySizes.xs,),
-        const Icon(Iconsax.verify5,
-          color: MyColors.primaryColor,
-          size: MySizes.iconXs,
-        ),
+        // const SizedBox(width: MySizes.xs,),
+        // Icon(Iconsax.verify5,
+        //   color: iconColor,
+        //   size: MySizes.iconXs,
+        // ),
       ],
     );
   }

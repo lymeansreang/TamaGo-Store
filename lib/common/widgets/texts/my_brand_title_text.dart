@@ -41,11 +41,11 @@ class MyBrandTitleText extends StatelessWidget {
                     ? Theme.of(context).textTheme.titleLarge!.apply(color: color)
                     : Theme.of(context).textTheme.bodyMedium!.apply(color: color),
         ),
-        // const SizedBox(width: MySizes.xs,),
-        // const Icon(Iconsax.verify5,
-        //   color: MyColors.primaryColor,
-        //   size: MySizes.iconXs,
-        // ),
+        const SizedBox(width: MySizes.xs,),
+        const Icon(Iconsax.verify5,
+          color: MyColors.primaryColor,
+          size: MySizes.iconXs,
+        ),
       ],
     );
   }
