@@ -36,6 +36,9 @@ class MyImages {
   static const String promoBanner2 = "assets/images/banners/banner2.jpg";
   static const String promoBanner3 = "assets/images/banners/banner3.jpg";
 
+  //Profile
+  static const String user = "assets/images/user/user.png";
+
   //Product
   static const String productImg1 = "assets/images/products/nike-shoes.png";
   static const String productImg2 = "assets/images/products/acer_laptop_1.png";

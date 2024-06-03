@@ -19,7 +19,7 @@ class MyPrimaryHeaderContainer extends StatelessWidget {
 
         /// -- If [size.isFinite' : is not true.in Stack] error occurred -> Read README.md file
         child: SizedBox(
-          height: 400,
+          // height: 400,
           child: Stack(
             children: [
               Positioned(

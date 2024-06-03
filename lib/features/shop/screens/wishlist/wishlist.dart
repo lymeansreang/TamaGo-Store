@@ -23,7 +23,7 @@ class FavoriteScreen extends StatelessWidget {
         ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(MySizes.defaultSpace),
+          padding: const EdgeInsets.all(MySizes.defaultSpace),
           child: Column(
             children: [
               MyGridLayout(itemCount: 4, itemBuilder: (_, index) => const MyProductVertical())
