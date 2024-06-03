@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/common/styles/shadow_style.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/rounded_container.dart';
@@ -73,13 +71,13 @@ class MyProductVertical extends StatelessWidget {
             const SizedBox(height: MySizes.spaceBtwItems / 2,),
 
             /// -- Details
-            Padding(
-                padding: const EdgeInsets.only(left: MySizes.sm),
+            const Padding(
+                padding: EdgeInsets.only(left: MySizes.sm),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const MyProductTitleText(title: 'Green Nike Air Shoes',smallSize: true,),
-                    const SizedBox(height: MySizes.spaceBtwItems / 2,),
+                    MyProductTitleText(title: 'Green Nike Air Shoes',smallSize: true,),
+                    SizedBox(height: MySizes.spaceBtwItems / 2,),
                     MyBrandTitleWithVerifiedIcon(title: 'Nike'),
                   ],
                 ),

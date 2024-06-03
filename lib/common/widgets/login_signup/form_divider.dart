@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
-import 'package:tamago_store/utils/constants/text_string.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';
 
 class MyFormDivider extends StatelessWidget {

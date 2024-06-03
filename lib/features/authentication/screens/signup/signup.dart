@@ -1,15 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/common/widgets/login_signup/form_divider.dart';
 import 'package:tamago_store/common/widgets/login_signup/social_button.dart';
 import 'package:tamago_store/features/authentication/screens/login/login.dart';
 import 'package:tamago_store/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/constants/text_string.dart';
-import 'package:tamago_store/utils/helpers/helper_functions.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});

@@ -1,15 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/common/styles/spacing_style.dart';
 import 'package:tamago_store/features/authentication/screens/login/widgets/login_form.dart';
 import 'package:tamago_store/common/widgets/login_signup/form_divider.dart';
 import 'package:tamago_store/features/authentication/screens/login/widgets/login_header.dart';
 import 'package:tamago_store/common/widgets/login_signup/social_button.dart';
-import 'package:tamago_store/utils/constants/colors.dart';
-import 'package:tamago_store/utils/constants/image_strings.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/constants/text_string.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';

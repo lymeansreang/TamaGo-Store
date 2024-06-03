@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 
 class MyRoundedImage extends StatelessWidget {

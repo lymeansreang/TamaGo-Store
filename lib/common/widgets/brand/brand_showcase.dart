@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:tamago_store/common/widgets/brand/brand_card.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/rounded_container.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
-import 'package:tamago_store/utils/constants/image_strings.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';
 

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
-import 'package:tamago_store/utils/constants/image_strings.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';
 

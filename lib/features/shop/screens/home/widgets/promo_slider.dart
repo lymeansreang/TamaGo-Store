@@ -5,7 +5,6 @@ import 'package:tamago_store/common/widgets/custom_shape/container/circular_cont
 import 'package:tamago_store/common/widgets/images/my_rounded_image.dart';
 import 'package:tamago_store/features/shop/controllers/home_controller.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
-import 'package:tamago_store/utils/constants/image_strings.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 
 class MyProSlider extends StatelessWidget {

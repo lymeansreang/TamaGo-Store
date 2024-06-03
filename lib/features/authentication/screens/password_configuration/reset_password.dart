@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:tamago_store/utils/constants/image_strings.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/constants/text_string.dart';
@@ -20,7 +19,7 @@ class ResetPassword extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(MySizes.defaultSpace),
+        padding: const EdgeInsets.all(MySizes.defaultSpace),
         child: Column(
           children: [
             /// Image

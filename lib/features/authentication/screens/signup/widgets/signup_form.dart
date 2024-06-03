@@ -3,10 +3,8 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/features/authentication/screens/signup/verify_email.dart';
 import 'package:tamago_store/features/authentication/screens/signup/widgets/term_condition_checkbox.dart';
-import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/constants/text_string.dart';
-import 'package:tamago_store/utils/helpers/helper_functions.dart';
 
 class MySignupForm extends StatelessWidget {
   const MySignupForm({

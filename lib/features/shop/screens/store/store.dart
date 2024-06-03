@@ -1,21 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:tamago_store/common/widgets/appbar/appbar.dart';
 import 'package:tamago_store/common/widgets/appbar/tabbar.dart';
-import 'package:tamago_store/common/widgets/brand/brand_showcase.dart';
-import 'package:tamago_store/common/widgets/custom_shape/container/rounded_container.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/search_contaioner.dart';
-import 'package:tamago_store/common/widgets/images/my_circular_image.dart';
 import 'package:tamago_store/common/widgets/layouts/grid_layout.dart';
 import 'package:tamago_store/common/widgets/product/cart/cart_menu_icon.dart';
 import 'package:tamago_store/common/widgets/brand/brand_card.dart';
-import 'package:tamago_store/common/widgets/texts/my_brand_title_text_with_verified_icon.dart';
 import 'package:tamago_store/common/widgets/texts/section_heading.dart';
 import 'package:tamago_store/features/shop/screens/store/widget/category_tab.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
-import 'package:tamago_store/utils/constants/enums.dart';
-import 'package:tamago_store/utils/constants/image_strings.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';
 

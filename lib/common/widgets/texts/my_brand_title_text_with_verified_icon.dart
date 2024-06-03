@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/common/widgets/texts/my_brand_title_text.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/enums.dart';
-import 'package:tamago_store/utils/constants/sizes.dart';
 
 class MyBrandTitleWithVerifiedIcon extends StatelessWidget {
   const MyBrandTitleWithVerifiedIcon({
