@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/common/widgets/images/my_circular_image.dart';
+import 'package:tamago_store/features/personalization/screens/profile/profile.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/image_strings.dart';
 
@@ -23,7 +25,7 @@ class MyUserProfileTile extends StatelessWidget {
       subtitle: Text('lmsreang3@gmail.com',
         style: Theme.of(context).textTheme.bodyMedium!.apply(color: MyColors.white),),
       trailing: IconButton(
-        onPressed: (){},icon: const Icon(Iconsax.edit, color: MyColors.white,),
+        onPressed: () => Get.to(() => const ProfileScreen()),icon: const Icon(Iconsax.edit, color: MyColors.white,),
       ),
     );
   }
