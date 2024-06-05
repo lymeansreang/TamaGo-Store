@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/common/widgets/appbar/appbar.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/primary_header_container.dart';
 import 'package:tamago_store/common/widgets/list_tiles/setting_menu_tile.dart';
 import 'package:tamago_store/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:tamago_store/common/widgets/texts/section_heading.dart';
+import 'package:tamago_store/features/personalization/screens/address/address.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 
@@ -41,8 +43,13 @@ class SettingScreen  extends StatelessWidget {
                     const MySectionHeading(title: 'Account Setting',showActionButton: false,),
                     const SizedBox(height: MySizes.spaceBtwItems,),
                     
-                    MySettingMenuTile(icon: Iconsax.safe_home, title: 'My Address', subTitle: 'Set shopping delivery address', onTap: (){},),
-                    MySettingMenuTile(icon: Iconsax.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout', onTap: (){},),
+                    MySettingMenuTile(
+                      icon: Iconsax.safe_home,
+                      title: 'My Addresses',
+                      subTitle: 'Set shopping delivery address',
+                      onTap: () => Get.to(() => const UserAddressScreen(),),
+                    ),
+                    MySettingMenuTile(icon: Iconsax.shopping_cart, title: 'My Cart', subTitle: 'Add, remove products and move to checkout', onTap: (){}),
                     MySettingMenuTile(icon: Iconsax.bag_tick, title: 'My Orders', subTitle: 'In-progress and Completed Orders', onTap: (){},),
                     MySettingMenuTile(icon: Iconsax.bank, title: 'Bank Account', subTitle: 'Withdraw balance to registered bank account', onTap: (){},),
                     MySettingMenuTile(icon: Iconsax.discount_shape, title: 'My Coupons', subTitle: 'List of all the discounted coupons', onTap: (){},),

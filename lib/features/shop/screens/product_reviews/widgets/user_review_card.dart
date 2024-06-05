@@ -59,7 +59,7 @@ class UserReviewCard extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Sreang's Store",style: Theme.of(context).textTheme.titleMedium,),
+                    Text("TamaGo's Store",style: Theme.of(context).textTheme.titleMedium,),
                     Text("02 nov, 2024",style: Theme.of(context).textTheme.bodyMedium,),
                   ],
                 ),
