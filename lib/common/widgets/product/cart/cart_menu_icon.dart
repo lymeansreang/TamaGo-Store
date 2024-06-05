@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tamago_store/features/shop/screens/cart/cart.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
+import 'package:tamago_store/utils/helpers/helper_functions.dart';
 
 class MyCartCounterIcon extends StatelessWidget {
   const MyCartCounterIcon({
     super.key,
     required this.onPressed,
     this.iconColor,
+    this.counterBgColor,
+    this.counterTextColor,
   });
 
-  final Color? iconColor;
+  final Color? iconColor,counterBgColor,counterTextColor;
   final VoidCallback onPressed;
 
 
   @override
   Widget build(BuildContext context) {
+    final dark = MyHelperFunctions.isDarkMode(context);
     return Stack(
       children: [
         IconButton(
-            onPressed: onPressed,
+            onPressed: ()=> Get.to(() => const CartScreen()),
             icon: Icon(Iconsax.shopping_bag, color: iconColor,)),
         Positioned(
           right: 0,
@@ -26,7 +32,7 @@ class MyCartCounterIcon extends StatelessWidget {
             width: 18,
             height: 18,
             decoration: BoxDecoration(
-              color: MyColors.black.withOpacity(0.5),
+              color: counterBgColor ?? (dark ? MyColors.white : MyColors.black),
               borderRadius: BorderRadius.circular(100),
             ),
             child: Center(
