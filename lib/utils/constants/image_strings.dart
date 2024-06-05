@@ -39,6 +39,11 @@ class MyImages {
   //Profile
   static const String user = "assets/images/user/user.png";
 
+  //Reviewers
+  static const String userProfileImg1 = "assets/images/reviewers/review_profile_image_1.jpg";
+  static const String userProfileImg2 = "assets/images/reviewers/review_profile_image_2.jpeg";
+  static const String userProfileImg3 = "assets/images/reviewers/review_profile_image_3.jpeg";
+
   //Product
   static const String productImg1 = "assets/images/products/nike-shoes.png";
   static const String productImg2 = "assets/images/products/acer_laptop_1.png";

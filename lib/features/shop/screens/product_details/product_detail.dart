@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:readmore/readmore.dart';
 import 'package:tamago_store/common/widgets/texts/section_heading.dart';
@@ -7,6 +8,7 @@ import 'package:tamago_store/features/shop/screens/product_details/widgets/produ
 import 'package:tamago_store/features/shop/screens/product_details/widgets/product_detail_Image_slider.dart';
 import 'package:tamago_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:tamago_store/features/shop/screens/product_details/widgets/rating_share_widget.dart';
+import 'package:tamago_store/features/shop/screens/product_reviews/product_reviews.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';
 
@@ -17,7 +19,7 @@ class ProductDetailScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = MyHelperFunctions.isDarkMode(context);
     return Scaffold(
-      bottomNavigationBar: MyBottomAddToCart(),
+      bottomNavigationBar: const MyBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -65,13 +67,13 @@ class ProductDetailScreen extends StatelessWidget {
                     ),
 
                     /// - Reviews\
-                    Divider(),
-                    SizedBox(height: MySizes.spaceBtwItems,),
+                    const Divider(),
+                    const SizedBox(height: MySizes.spaceBtwItems,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        MySectionHeading(title: 'Review(999)',onPressed: (){},showActionButton: false,),
-                        IconButton(onPressed: (){}, icon: const Icon(Iconsax.arrow_right_3, size: 18,),)
+                        MySectionHeading(title: 'Review(999)',onPressed:(){},showActionButton: false,),
+                        IconButton(onPressed: () => Get.to(() => const ProductReviewsScreen()), icon: const Icon(Iconsax.arrow_right_3, size: 18,),)
                       ],
                     ),
                     const SizedBox(height: MySizes.spaceBtwSections,),

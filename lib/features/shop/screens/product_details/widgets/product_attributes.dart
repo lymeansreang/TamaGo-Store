@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tamago_store/common/widgets/chips/choice_chip.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/rounded_container.dart';
