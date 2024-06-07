@@ -34,8 +34,8 @@ class MyCartItem extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              MyBrandTitleWithVerifiedIcon(title: 'Nike'),
-              Flexible(child: MyProductTitleText(title: 'White Nike Football ',maxLines: 1,)),
+              const MyBrandTitleWithVerifiedIcon(title: 'Nike'),
+              const Flexible(child: MyProductTitleText(title: 'White Nike Football ',maxLines: 1,)),
 
               /// Attributes
               Text.rich(

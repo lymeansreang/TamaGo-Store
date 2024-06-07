@@ -17,7 +17,7 @@ class MyCouponCode extends StatelessWidget {
     return MyRoundedContainer(
       showBorder: true,
       backgroundColor: dark ? MyColors.dark : MyColors.white,
-      padding: EdgeInsets.only(top: MySizes.sm, bottom: MySizes.sm, right: MySizes.sm,left: MySizes.md),
+      padding: const EdgeInsets.only(top: MySizes.sm, bottom: MySizes.sm, right: MySizes.sm,left: MySizes.md),
       child: Row(
         children: [
           Flexible(

@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/common/widgets/appbar/appbar.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
@@ -12,31 +10,31 @@ class AddNewAddressScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: MyAppBar(showBackArrow: true,title: Text('Add new Address'),),
+      appBar: const MyAppBar(showBackArrow: true,title: Text('Add new Address'),),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(MySizes.defaultSpace),
+          padding: const EdgeInsets.all(MySizes.defaultSpace),
           child: Form(
             child: Column(
               children: [
                 TextFormField(
-                  decoration: InputDecoration(prefixIcon: Icon(Iconsax.user), labelText: 'Name'),
+                  decoration: const InputDecoration(prefixIcon: Icon(Iconsax.user), labelText: 'Name'),
                 ),
                 const SizedBox(height: MySizes.spaceBtwInputFields,),
                 TextFormField(
-                  decoration: InputDecoration(prefixIcon: Icon(Iconsax.mobile), labelText: 'Phone Number'),
+                  decoration: const InputDecoration(prefixIcon: Icon(Iconsax.mobile), labelText: 'Phone Number'),
                 ),
                 const SizedBox(height: MySizes.spaceBtwInputFields,),
                 Row(
                   children: [
                     Expanded(
                       child: TextFormField(
-                        decoration: InputDecoration(prefixIcon: Icon(Iconsax.building_31), labelText: 'Street'),),
+                        decoration: const InputDecoration(prefixIcon: Icon(Iconsax.building_31), labelText: 'Street'),),
                     ),
                     const SizedBox(width: MySizes.spaceBtwInputFields,),
                     Expanded(
                       child: TextFormField(
-                        decoration: InputDecoration(prefixIcon: Icon(Iconsax.code), labelText: 'Postal Code'),
+                        decoration: const InputDecoration(prefixIcon: Icon(Iconsax.code), labelText: 'Postal Code'),
                       ),
                     ),
                   ],
@@ -46,12 +44,12 @@ class AddNewAddressScreen extends StatelessWidget {
                   children: [
                     Expanded(
                       child: TextFormField(
-                        decoration: InputDecoration(prefixIcon: Icon(Iconsax.building), labelText: 'City'),),
+                        decoration: const InputDecoration(prefixIcon: Icon(Iconsax.building), labelText: 'City'),),
                     ),
                     const SizedBox(width: MySizes.spaceBtwInputFields,),
                     Expanded(
                       child: TextFormField(
-                        decoration: InputDecoration(prefixIcon: Icon(Iconsax.activity), labelText: 'State'),
+                        decoration: const InputDecoration(prefixIcon: Icon(Iconsax.activity), labelText: 'State'),
                       ),
                     ),
                   ],
@@ -62,7 +60,7 @@ class AddNewAddressScreen extends StatelessWidget {
                 SizedBox(width: double.infinity,
                   child: ElevatedButton(
                     onPressed: (){},
-                    child: Text('Save'),
+                    child: const Text('Save'),
                   ),
                 ),
               ],

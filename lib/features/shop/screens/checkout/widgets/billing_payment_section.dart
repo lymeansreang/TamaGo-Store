@@ -15,17 +15,17 @@ class MyBillingPaymentSection extends StatelessWidget {
     return Column(
       children: [
         MySectionHeading(title: 'Payment Method', buttonTitle: 'Change',onPressed: (){},),
-        SizedBox(height: MySizes.spaceBtwItems / 2,),
+        const SizedBox(height: MySizes.spaceBtwItems / 2,),
         Row(
           children: [
             MyRoundedContainer(
               width: 60,
               height: 35,
               backgroundColor: dark ? MyColors.light : MyColors.white,
-              padding: EdgeInsets.all(MySizes.sm),
-              child: Image(image: AssetImage(MyImages.paypal), fit: BoxFit.contain,),
+              padding: const EdgeInsets.all(MySizes.sm),
+              child: const Image(image: AssetImage(MyImages.paypal), fit: BoxFit.contain,),
             ),
-            SizedBox(width: MySizes.spaceBtwItems / 2,),
+            const SizedBox(width: MySizes.spaceBtwItems / 2,),
             Text('Paypal', style: Theme.of(context).textTheme.bodyLarge,)
           ],
         ),

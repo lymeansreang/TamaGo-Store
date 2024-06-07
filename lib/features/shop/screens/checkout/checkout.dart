@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tamago_store/common/widgets/appbar/appbar.dart';
@@ -32,24 +31,24 @@ class CheckoutScreen extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(MySizes.defaultSpace),
+          padding: const EdgeInsets.all(MySizes.defaultSpace),
           child: Column(
             children: [
 
               /// -- Items in cart
-              MyCartItems(showAddRemoveButtons: false,),
-              SizedBox(height: MySizes.spaceBtwSections,),
+              const MyCartItems(showAddRemoveButtons: false,),
+              const SizedBox(height: MySizes.spaceBtwSections,),
 
               /// -- Coupon TextField
-              MyCouponCode(),
-              SizedBox(height: MySizes.spaceBtwSections,),
+              const MyCouponCode(),
+              const SizedBox(height: MySizes.spaceBtwSections,),
 
               /// -- Billing Section
               MyRoundedContainer(
                 showBorder: true,
-                padding: EdgeInsets.all(MySizes.md),
+                padding: const EdgeInsets.all(MySizes.md),
                 backgroundColor: dark ? MyColors.black : MyColors.white,
-                child: Column(
+                child: const Column(
                   children: [
                     /// Pricing
                     MyBillingAmountSection(),
@@ -83,7 +82,7 @@ class CheckoutScreen extends StatelessWidget {
               title: 'Payment Successfully',
               subTitle: 'Your item will be shipped soon!',
               onPressed: () => Get.offAll(() => const NavigationMenu()))),
-          child: Text('Checkout \$256.0'),
+          child: const Text('Checkout \$256.0'),
         ),
       ),
     );

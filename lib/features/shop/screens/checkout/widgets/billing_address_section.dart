@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tamago_store/common/widgets/custom_shape/container/rounded_container.dart';
 import 'package:tamago_store/common/widgets/texts/section_heading.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
-import 'package:tamago_store/utils/constants/image_strings.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';
 
@@ -21,8 +19,8 @@ class MyBillingAddressSection extends StatelessWidget {
 
         Row(
           children: [
-            Icon(Icons.phone, color: MyColors.grey, size: 16,),
-            SizedBox(width: MySizes.spaceBtwItems,),
+            const Icon(Icons.phone, color: MyColors.grey, size: 16,),
+            const SizedBox(width: MySizes.spaceBtwItems,),
             Text('+855 77377590', style: Theme.of(context).textTheme.bodyMedium,)
           ],
         ),
@@ -30,8 +28,8 @@ class MyBillingAddressSection extends StatelessWidget {
 
         Row(
           children: [
-            Icon(Icons.location_history, color: MyColors.grey, size: 16,),
-            SizedBox(width: MySizes.spaceBtwItems,),
+            const Icon(Icons.location_history, color: MyColors.grey, size: 16,),
+            const SizedBox(width: MySizes.spaceBtwItems,),
             Text('Psa Depo 3, Phnom Penh, Cambodia', style: Theme.of(context).textTheme.bodyMedium,)
           ],
         ),

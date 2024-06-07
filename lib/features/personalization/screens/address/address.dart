@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:tamago_store/common/widgets/appbar/appbar.dart';
-import 'package:tamago_store/common/widgets/custom_shape/container/rounded_container.dart';
 import 'package:tamago_store/features/personalization/screens/address/add_new_address.dart';
 import 'package:tamago_store/features/personalization/screens/address/widgets/single_address.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
@@ -23,7 +22,7 @@ class UserAddressScreen extends StatelessWidget {
         backgroundColor: MyColors.primaryColor,
         child: const Icon(Iconsax.add, color: MyColors.white,),
       ),
-      body: SingleChildScrollView(
+      body: const SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(MySizes.defaultSpace),
           child: Column(
