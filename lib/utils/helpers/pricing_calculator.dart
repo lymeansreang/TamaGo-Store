@@ -1,4 +1,3 @@
-
 class MyPricingCalculator {
 
   // -- Calculate Price based on tax and shipping
