@@ -1,0 +1,90 @@
+{
+  "project_info": {
+    "project_number": "846412471261",
+    "project_id": "tamagoapp-49312",
+    "storage_bucket": "tamagoapp-49312.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846412471261:android:f18d40390e6760a3153434",
+        "android_client_info": {
+          "package_name": "com.example.tamago_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846412471261-o67g08b03uif26om67qvmkj1sb5dvvn0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCikPBH5H0oL17gDZNM-lD_gEbVOk9-Fgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846412471261-o67g08b03uif26om67qvmkj1sb5dvvn0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "846412471261-45of76pa869d7366rpqc43r9qts27560.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tamagoStore"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:846412471261:android:fd9fe56a58115470153434",
+        "android_client_info": {
+          "package_name": "com.sreang.tamgo_store"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "846412471261-vvlaueau76p3n240mmfdbog11320bun1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sreang.tamgo_store",
+            "certificate_hash": "5820d84d3dab2298a3978c65e7ff0c9ce1e21cec"
+          }
+        },
+        {
+          "client_id": "846412471261-o67g08b03uif26om67qvmkj1sb5dvvn0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCikPBH5H0oL17gDZNM-lD_gEbVOk9-Fgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "846412471261-o67g08b03uif26om67qvmkj1sb5dvvn0.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "846412471261-45of76pa869d7366rpqc43r9qts27560.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.tamagoStore"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
