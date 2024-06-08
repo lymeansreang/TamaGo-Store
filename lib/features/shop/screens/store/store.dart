@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tamago_store/common/widgets/appbar/appbar.dart';
 import 'package:tamago_store/common/widgets/appbar/tabbar.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/search_contaioner.dart';
@@ -6,6 +7,7 @@ import 'package:tamago_store/common/widgets/layouts/grid_layout.dart';
 import 'package:tamago_store/common/widgets/product/cart/cart_menu_icon.dart';
 import 'package:tamago_store/common/widgets/brand/brand_card.dart';
 import 'package:tamago_store/common/widgets/texts/section_heading.dart';
+import 'package:tamago_store/features/shop/screens/brands/all_brands.dart';
 import 'package:tamago_store/features/shop/screens/store/widget/category_tab.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
@@ -53,7 +55,7 @@ class StoreScreen extends StatelessWidget {
                         const SizedBox(height: MySizes.spaceBtwSections,),
       
                         /// -- Feature Brands
-                        MySectionHeading(title: 'Feature Brands', onPressed: (){}),
+                        MySectionHeading(title: 'Feature Brands', onPressed: () => Get.to(() => const AllBrandsScreen())),
                         const SizedBox(height: MySizes.spaceBtwItems / 1.5,),
 
                         /// -- Brands GRID
