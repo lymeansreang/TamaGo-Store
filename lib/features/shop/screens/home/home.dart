@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/primary_header_container.dart';
 import 'package:tamago_store/common/widgets/custom_shape/container/search_contaioner.dart';
 import 'package:tamago_store/common/widgets/layouts/grid_layout.dart';
 import 'package:tamago_store/common/widgets/product/product_cards/product_card_vertical.dart';
 import 'package:tamago_store/common/widgets/texts/section_heading.dart';
+import 'package:tamago_store/features/shop/screens/all_products/all_products.dart';
 import 'package:tamago_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:tamago_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:tamago_store/features/shop/screens/home/widgets/promo_slider.dart';
@@ -63,7 +65,7 @@ class HomeScreen extends StatelessWidget {
                   const SizedBox(height: MySizes.spaceBtwSections,),
 
                   /// --Heading
-                  MySectionHeading(title: 'Popular Categories',onPressed: (){},),
+                  MySectionHeading(title: 'Popular Products',onPressed: () => Get.to(() => const AllProducts()),),
                   const SizedBox(height: MySizes.spaceBtwItems,),
 
                   /// -- Popular Product

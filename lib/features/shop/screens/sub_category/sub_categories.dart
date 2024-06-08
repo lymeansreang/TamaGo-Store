@@ -44,7 +44,7 @@ class SubCategoriesScreen extends StatelessWidget {
                         itemBuilder: (context, index) => const MyProductHorizontal()),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),
