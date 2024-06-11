@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tamago_store/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:tamago_store/features/authentication/screens/signup/verify_email.dart';
 import 'package:tamago_store/features/authentication/screens/signup/widgets/term_condition_checkbox.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/constants/text_string.dart';
+import 'package:tamago_store/utils/validators/validation.dart';
 
 class MySignupForm extends StatelessWidget {
   const MySignupForm({
@@ -14,14 +16,17 @@ class MySignupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
+    final controller = Get.put(SignupController());
     return Form(
+      key: controller.signupFormKey,
       child: Column(
         children: [
           Row(
             children: [
               Expanded(
                 child: TextFormField(
+                  controller: controller.firstname,
+                  validator: (value) => MyValidator.validateEmptyText('First Name', value),
                   expands: false,
                   decoration: const InputDecoration(
                     labelText: MyText.firstname,
@@ -32,6 +37,8 @@ class MySignupForm extends StatelessWidget {
               const SizedBox(width: MySizes.spaceBtwInputFields,),
               Expanded(
                 child: TextFormField(
+                  controller: controller.lastname,
+                  validator: (value) => MyValidator.validateEmptyText('Last Name', value),
                   expands: false,
                   decoration: const InputDecoration(
                     labelText: MyText.lastName,
@@ -44,6 +51,8 @@ class MySignupForm extends StatelessWidget {
 
           /// Username
           TextFormField(
+            controller: controller.username,
+            validator: (value) => MyValidator.validateEmptyText('Username', value),
             decoration: const InputDecoration(
               labelText: MyText.username,
               prefixIcon: Icon(Iconsax.user_edit),
@@ -53,6 +62,8 @@ class MySignupForm extends StatelessWidget {
 
           /// Email
           TextFormField(
+            controller: controller.email,
+            validator: (value) => MyValidator.validateEmail(value),
             decoration: const InputDecoration(
               labelText: MyText.email,
               prefixIcon: Icon(Iconsax.direct),
@@ -62,6 +73,8 @@ class MySignupForm extends StatelessWidget {
 
           /// Phone Number
           TextFormField(
+            controller: controller.phoneNum,
+            validator: (value) => MyValidator.validatePhoneNumber(value),
             decoration: const InputDecoration(
               labelText: MyText.phoneNo,
               prefixIcon: Icon(Iconsax.call),
@@ -71,6 +84,8 @@ class MySignupForm extends StatelessWidget {
 
           /// Password
           TextFormField(
+            controller: controller.password,
+            validator: (value) => MyValidator.validatePassword(value),
             obscureText: true,
             decoration: const InputDecoration(
               labelText: MyText.password,
@@ -87,7 +102,7 @@ class MySignupForm extends StatelessWidget {
           /// Sign up button
           SizedBox(width: double.infinity,
             child: ElevatedButton(
-                onPressed: () => Get.to(() => const VerifyEmailScreen()),
+                onPressed: () => controller.signup(),
                 child: const Text(MyText.createAccount)),),
         ],
       ),

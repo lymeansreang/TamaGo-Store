@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tamago_store/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/theme/theme.dart';
 
 class App extends StatelessWidget {
@@ -13,7 +14,12 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: MyAppTheme.lightTheme,
       darkTheme: MyAppTheme.darkTheme,
-      home: const OnBoardingScreen(),
+      home: const Scaffold(
+        backgroundColor: MyColors.primaryColor,
+        body: Center(
+          child: CircularProgressIndicator(color: MyColors.white,),
+        ),
+      ),
     );
   }
 }

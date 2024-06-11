@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tamago_store/features/authentication/controllers.onboarding/onboarding_controller.dart';
+import 'package:tamago_store/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/device/device_utility.dart';
 
