@@ -23,7 +23,7 @@ class MyFullScreenLoader {
               height: double.infinity,
               child: Column(
                 children: [
-                  SizedBox(height: 250,),
+                  const SizedBox(height: 250,),
                   MyAnimationLoaderWidget(text: text, animation: animation,),
                 ],
               ),

@@ -14,6 +14,9 @@ class MyImages {
   static const String onBoardingImage2 = "assets/images/on_boarding_image/Woman Shopping Online.gif";
   static const String onBoardingImage3 = "assets/images/on_boarding_image/delivery.gif";
 
+  // Animation
+  static const String docer = "assets/animations/141594-animation-of-docer.json";
+
   //Success image
   static const String successImage1 = "assets/images/success/verifying.gif";
   static const String successImage2 = "assets/images/success/success.gif";
