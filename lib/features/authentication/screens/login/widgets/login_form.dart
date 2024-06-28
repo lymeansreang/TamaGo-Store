@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:tamago_store/features/authentication/controllers/login/login_controller.dart';
 import 'package:tamago_store/features/authentication/screens/password_configuration/forget_password.dart';
 import 'package:tamago_store/features/authentication/screens/signup/signup.dart';
 import 'package:tamago_store/navigation_menu.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/constants/text_string.dart';
+import 'package:tamago_store/utils/validators/validation.dart';
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -14,7 +16,10 @@ class LoginForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(LoginController());
+
     return Form(
+      key: controller.loginFormKey,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: MySizes.spaceBtwSections),
         child: Column(
@@ -22,6 +27,8 @@ class LoginForm extends StatelessWidget {
 
             /// Email
             TextFormField(
+              controller: controller.email,
+              validator: (value) => MyValidator.validateEmail(value),
               decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.direct_right),
                 labelText: MyText.email,
@@ -31,6 +38,8 @@ class LoginForm extends StatelessWidget {
 
             /// Password
             TextFormField(
+              controller: controller.password,
+              validator: (value) => MyValidator.validateEmptyText("Password",value),
               decoration: const InputDecoration(
                 prefixIcon: Icon(Iconsax.password_check),
                 labelText: MyText.password,
@@ -46,7 +55,7 @@ class LoginForm extends StatelessWidget {
                 /// Remember Me
                 Row(
                   children: [
-                    Checkbox(value: true, onChanged: (value){}),
+                    Checkbox(value: controller.rememberMe.value, onChanged: (value){}),
                     const Text(MyText.rememberMe),
                   ],
                 ),

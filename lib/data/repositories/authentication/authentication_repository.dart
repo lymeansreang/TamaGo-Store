@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:tamago_store/features/authentication/screens/login/login.dart';
 import 'package:tamago_store/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:tamago_store/features/authentication/screens/signup/verify_email.dart';
 import 'package:tamago_store/utils/exceptions/firebase_auth_exceptions.dart';
 import 'package:tamago_store/utils/exceptions/firebase_exceptions.dart';
 import 'package:tamago_store/utils/exceptions/format_exceptions.dart';
@@ -27,20 +28,49 @@ class AuthenticationRepository extends GetxController{
   }
 
   /// Function to show relevant screen
-  screenRedirect() async {
-  // Local Storage
-    if(kDebugMode){
-      print('============================ GET STORAGE Auth Repo ============================');
-      print(deviceStorage.read('IsFirstTime'));
+  void screenRedirect() async {
+    final user = _auth.currentUser;
+    if(user != null){
+      // if the user is logged in
+      if(user.emailVerified){
+        // If the user's email is verified, navigate to the main Navigation Menu
+        Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));
+      }else{
+        // if the user's email is not verified, navigate to the VerifyEmailScreen
+        Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email,));
+      }
+    }else{
+      // Local Storage
+      deviceStorage.writeIfNull('IsFirstTime', true);
+
+      // Check if it's the first time lunching the app
+      deviceStorage.read('IsFirstTime') != true
+          ? Get.offAll(() => const LoginScreen()) // Redirect to Login Screen if not the first time
+          : Get.offAll(const OnBoardingScreen()); // Redirect to OnBoarding Screen if it's the first time
     }
 
-    deviceStorage.writeIfNull('IsFirstTime', true);
-    deviceStorage.read('IsFirstTime') != true ? Get.offAll(() => const LoginScreen()) : Get.offAll(const OnBoardingScreen());
+
   }
 
   /* ------------------------- Email & Password sign-in -------------------------- */
 
   /// [EmailAuthentication] - SignIn
+  Future<UserCredential> loginWithEmailAndPassword(String email, String password) async {
+    try{
+      return await _auth.signInWithEmailAndPassword(email: email, password: password);
+    }on FirebaseAuthException catch (e){
+      throw MyFirebaseAuthException(e.code).message;
+    }on FirebaseException catch (e){
+      throw MyFirebaseException(e.code).message;
+    }on FormatException catch (_){
+      throw const MyFormatException();
+    }on PlatformException catch (e){
+      throw MyPlatformException(e.code).message;
+    }
+    catch(e){
+      throw 'Something went wrong. Please try again';
+    }
+  }
 
   /// [EmailAuthentication] - Register
   Future<UserCredential> registerWithEmailAndPassword(String email, String password) async{

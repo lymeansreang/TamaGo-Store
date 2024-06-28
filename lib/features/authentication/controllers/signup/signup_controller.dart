@@ -34,14 +34,14 @@ class SignupController extends GetxController{
       if(!isConnected) {
         MyFullScreenLoader.stopLoading();
         return;
-      };
+      }
 
 
       // Form Validation
       if(!signupFormKey.currentState!.validate()) {
         MyFullScreenLoader.stopLoading();
         return;
-      };
+      }
 
 
       // Privacy Policy Check

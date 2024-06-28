@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
 import 'package:tamago_store/utils/formatters/formatter.dart';
 
 // Model class representing user data
@@ -58,18 +57,18 @@ class UserModel {
   }
 
   // Factory Method to create a UserModel from a Firebase document snapshot
-  // factory UserModel.from(DocumentSnapshot<Map<String, dynamic>> document){
-  //   if(document.data() != null){
-  //     final data = document.data()!;
-  //     return UserModel(
-  //         id: document.id,
-  //         firstName: data['FirstName'] ?? '',
-  //         lastName: data['LastName'] ?? '',
-  //         username: data['Username'] ?? '',
-  //         email: data['Email'] ?? '',
-  //         phoneNum: data['PhoneNumber'] ?? '',
-  //         profilePicture: data['ProfilePicture'] ?? '',
-  //     );
-  //   }
-  // }
+  factory (DocumentSnapshot<Map<String, dynamic>> document){
+    if(document.data() != null){
+      final data = document.data()!;
+      return UserModel(
+          id: document.id,
+          firstName: data['FirstName'] ?? '',
+          lastName: data['LastName'] ?? '',
+          username: data['Username'] ?? '',
+          email: data['Email'] ?? '',
+          phoneNum: data['PhoneNumber'] ?? '',
+          profilePicture: data['ProfilePicture'] ?? '',
+      );
+    }
+  }
 }

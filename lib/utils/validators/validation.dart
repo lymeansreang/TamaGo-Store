@@ -7,6 +7,7 @@ class MyValidator {
     if(value == null || value.isEmpty){
       return '$fieldName is required';
     }
+    return null;
   }
 
   static String? validateEmail(String? value){
@@ -58,10 +59,10 @@ class MyValidator {
     }
 
     // Regular expression for phone number validation (assuming a 10 digit us phone number format)
-    final phoneRegExp = RegExp(r'^\d{10}$');
+    final phoneRegExp = RegExp(r'^\d{9}$');
 
     if(!phoneRegExp.hasMatch(value)) {
-      return 'Invalid phone number format (10 digit required)';
+      return 'Invalid phone number format (9 digit required)';
     }
     return null;
   }

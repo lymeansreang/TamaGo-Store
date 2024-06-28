@@ -9,7 +9,12 @@ import 'package:tamago_store/utils/constants/text_string.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';
 
 class VerifyEmailScreen extends StatelessWidget {
-  const VerifyEmailScreen({super.key});
+  const VerifyEmailScreen({
+    super.key,
+  this.email,
+
+  });
+    final email;
 
   @override
   Widget build(BuildContext context) {

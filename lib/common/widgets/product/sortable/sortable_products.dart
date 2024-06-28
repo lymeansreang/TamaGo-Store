@@ -15,19 +15,19 @@ class MySortableProducts extends StatelessWidget {
       children: [
         /// Dropdown
         DropdownButtonFormField(
-          decoration: InputDecoration(prefixIcon: Icon(Iconsax.sort)),
+          decoration: const InputDecoration(prefixIcon: Icon(Iconsax.sort)),
           items: ['Name','Heigher Price', 'Lower Price', 'Sale', 'Newest', 'Popularity'].map((option) =>
               DropdownMenuItem(
                   value: option,
                   child: Text(option))).toList(),
           onChanged: (value){},
         ),
-        SizedBox(height: MySizes.spaceBtwSections,),
+        const SizedBox(height: MySizes.spaceBtwSections,),
 
         /// Products
         MyGridLayout(
           itemCount: 8,
-          itemBuilder: (_, index) => MyProductVertical(),),
+          itemBuilder: (_, index) => const MyProductVertical(),),
       ],
     );
   }

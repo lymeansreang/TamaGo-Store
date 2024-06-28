@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tamago_store/common/widgets/network/network_manager.dart';
 
