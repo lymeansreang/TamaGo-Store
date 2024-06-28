@@ -37,13 +37,19 @@ class LoginForm extends StatelessWidget {
             const SizedBox(height: MySizes.spaceBtwInputFields,),
 
             /// Password
-            TextFormField(
-              controller: controller.password,
-              validator: (value) => MyValidator.validateEmptyText("Password",value),
-              decoration: const InputDecoration(
-                prefixIcon: Icon(Iconsax.password_check),
-                labelText: MyText.password,
-                suffixIcon: Icon(Iconsax.eye_slash),
+            Obx(
+                  () => TextFormField(
+                controller: controller.password,
+                validator: (value) => MyValidator.validatePassword(value),
+                obscureText: controller.hidePassword.value,
+                decoration: InputDecoration(
+                  labelText: MyText.password,
+                  prefixIcon: const Icon(Iconsax.password_check),
+                  suffixIcon: IconButton(
+                    onPressed: () => controller.hidePassword.value = !controller.hidePassword.value,
+                    icon: Icon(controller.hidePassword.value ? Iconsax.eye_slash : Iconsax.eye),
+                  ),
+                ),
               ),
             ),
             const SizedBox(height: MySizes.spaceBtwInputFields / 2,),
@@ -55,7 +61,9 @@ class LoginForm extends StatelessWidget {
                 /// Remember Me
                 Row(
                   children: [
-                    Checkbox(value: controller.rememberMe.value, onChanged: (value){}),
+                    Obx(
+                      () => Checkbox(value: controller.rememberMe.value, onChanged: (value) => controller.rememberMe.value),
+                    ),
                     const Text(MyText.rememberMe),
                   ],
                 ),
