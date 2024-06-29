@@ -62,7 +62,7 @@ class LoginForm extends StatelessWidget {
                 Row(
                   children: [
                     Obx(
-                      () => Checkbox(value: controller.rememberMe.value, onChanged: (value) => controller.rememberMe.value),
+                      () => Checkbox(value: controller.rememberMe.value, onChanged: (value) => controller.rememberMe.value = !controller.rememberMe.value),
                     ),
                     const Text(MyText.rememberMe),
                   ],
@@ -80,7 +80,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () => Get.to(() => const NavigationMenu()),
+                onPressed: () => controller.emailAndPasswordSignIn(),
                 child:
                 const Text(MyText.signIn),
               ),

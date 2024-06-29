@@ -96,7 +96,6 @@ class MySignupForm extends StatelessWidget {
                   ),
                 ),
               ),
-
           ),
           const SizedBox(height: MySizes.spaceBtwInputFields,),
 

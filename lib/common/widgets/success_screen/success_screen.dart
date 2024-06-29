@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:tamago_store/common/styles/spacing_style.dart';
+import 'package:tamago_store/features/shop/screens/home/home.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
 import 'package:tamago_store/utils/constants/text_string.dart';
 import 'package:tamago_store/utils/helpers/helper_functions.dart';

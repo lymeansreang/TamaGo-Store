@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:tamago_store/bindings/general_bindings.dart';
+import 'package:tamago_store/navigation_menu.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/theme/theme.dart';
 
@@ -20,6 +21,7 @@ class App extends StatelessWidget {
         body: Center(
           child: CircularProgressIndicator(color: MyColors.white,),
         ),
+        // bottomNavigationBar: NavigationMenu(),
       ),
     );
   }

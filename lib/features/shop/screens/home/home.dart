@@ -9,6 +9,7 @@ import 'package:tamago_store/features/shop/screens/all_products/all_products.dar
 import 'package:tamago_store/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:tamago_store/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:tamago_store/features/shop/screens/home/widgets/promo_slider.dart';
+import 'package:tamago_store/navigation_menu.dart';
 import 'package:tamago_store/utils/constants/colors.dart';
 import 'package:tamago_store/utils/constants/image_strings.dart';
 import 'package:tamago_store/utils/constants/sizes.dart';
@@ -78,6 +79,7 @@ class HomeScreen extends StatelessWidget {
           ],
         ),
       ),
+      // bottomNavigationBar: const NavigationMenu(),
     );
   }
 }
